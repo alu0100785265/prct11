@@ -22,7 +22,7 @@ class Article < Bbl::Bbl
     end
 
 
-    def medio(datos = {})
+    def asignacion(datos = {})
         aux = " (#{datos[:name]} #{datos[:volumen]} #{datos[:issue]})" if datos[:issue] && datos[:name] && datos[:volumen]
         @journal << aux
         @journal
