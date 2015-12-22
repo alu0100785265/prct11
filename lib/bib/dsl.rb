@@ -1,6 +1,6 @@
 
 require './bibliografia'
-require_relative 'apa'
+require 'apa'
 
 
 class Articulo < Bbl
