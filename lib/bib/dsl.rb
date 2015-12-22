@@ -3,7 +3,7 @@ require 'bibliografia'
 require_relative 'apa'
 
 
-class Article < Bbl::Bbl
+class Articulo < Bbl::Bbl
     attr_accessor :name, :autores, :journal, :titulo
     
     
@@ -16,16 +16,19 @@ class Article < Bbl::Bbl
 
     
     def autores(datos = {})
-       aux = " (#{datos[:surname]} #{datos[:name]})" if datos[:surname] && datos[:name]
+       aux = " (#{datos[:surname]} #{datos[:name]})" 
+            if datos[:surname] && datos[:name]
        @autores << aux
-       @autores
+   end
     end
 
 
     def asignacion(datos = {})
-        aux = " (#{datos[:name]} #{datos[:volumen]} #{datos[:issue]})" if datos[:issue] && datos[:name] && datos[:volumen]
+        aux = " (#{datos[:name]} #{datos[:volumen]} #{datos[:issue]})"  
+                if datos[:issue] && datos[:name] && datos[:volumen]
         @journal << aux
-        @journal
+       
+                end
     end
     
     
@@ -33,6 +36,5 @@ class Article < Bbl::Bbl
         @titulo = dat
     end
     
-    
-
 end
+    
