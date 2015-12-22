@@ -1,9 +1,9 @@
 
-require 'bibliografia'
+require './bibliografia'
 require_relative 'apa'
 
 
-class Articulo < Bbl::Bbl
+class Articulo < Bbl
     attr_accessor :name, :autores, :journal, :titulo
     
     

@@ -1,5 +1,6 @@
-require "spec_helper"
-require "bib"
+require 'spec_helper'
+require 'bib'
+require 'bibliografia'
 
 
 
@@ -8,9 +9,13 @@ describe Bbl do
         
         before :each do
             @dsl = Articulo.new("Nombre") do
-                    autores :surname => "Ruiz", :name => "Jose"
+                    autores :surname => "Ruiz", 
+                    :name => "Jose"
 
-                    asignacion :name => "Navidad", :volumen => 5, :issue => 2
+                    asignacion :name => "Navidad", 
+                    :volumen => 5, 
+                    :issue => 2
+                    
                     title "Navidad"
                     
             end
@@ -25,7 +30,7 @@ describe Bbl do
         end
         
         it "Comprobar que existe un autor"do
-            expect(@dsl.autores).to eq([" (Ruiz Jose)",nil])
+            expect(@dsl.autores).to eq([" (Ruiz Jose)"])
         end
         
         
