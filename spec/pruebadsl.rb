@@ -1,6 +1,6 @@
 require 'spec_helper'
 require 'bib'
-require 'bibliografia'
+
 
 
 
@@ -10,12 +10,13 @@ describe Bbl do
         before :each do
             @dsl = Articulo.new("Nombre") do
                     autores :surname => "Ruiz", 
-                    :name => "Jose"
+                               :name => "Jose"
 
                     asignacion :name => "Navidad", 
-                    :volumen => 5, 
-                    :issue => 2
+                                 :volumen => 5, 
+                                 :issue => 2
                     
+                   
                     title "Navidad"
                     
             end
@@ -25,7 +26,7 @@ describe Bbl do
             expect(@dsl).not_to eq(nil)
         end
         
-        it "tiene un nombre" do
+        it "Tiene un nombre " do
             expect(@dsl.name).to eq("Jose")
         end
         
